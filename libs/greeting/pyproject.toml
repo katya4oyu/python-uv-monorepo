@@ -1,10 +1,10 @@
 [project]
 name = "greeting"
 version = "0.1.0"
-description = "Add your description here"
+description = "A library example"
 readme = "README.md"
 authors = [
-    { name = "yuuya", email = "yuuya.yk.katoh@prism.ricoh" } 
+    { name = "Yuya Kato", email = "katya4oyu@icloud.com" } 
 ]
 requires-python = ">=3.10, <4"
 dependencies = []

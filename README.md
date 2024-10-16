@@ -1,2 +1,3 @@
-# python-uv-monorepo
-A mono repo with Python + uv
+# Python + uv monorepo template
+
+This is a template for a monorepo project using Python and uv.

@@ -5,7 +5,7 @@ requires-python = ">=3.10, <4"
 members = [
     "greeter",
     "greeting",
-    "python-uv-workspace",
+    "python-uv-monorepo",
 ]
 
 [[package]]
@@ -68,12 +68,9 @@ wheels = [
 ]
 
 [[package]]
-name = "python-uv-workspace"
+name = "python-uv-monorepo"
 version = "0.1.0"
 source = { virtual = "." }
-dependencies = [
-    { name = "greeting" },
-]
 
 [package.dev-dependencies]
 dev = [
@@ -82,7 +79,6 @@ dev = [
 ]
 
 [package.metadata]
-requires-dist = [{ name = "greeting", editable = "libs/greeting" }]
 
 [package.metadata.requires-dev]
 dev = [
