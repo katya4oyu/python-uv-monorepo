@@ -24,24 +24,27 @@ dev-dependencies = [
 [tool.uv.workspace]
 members = ["libs/*", "apps/*"]
 
+#######################################
+# Ruff configuration
+#######################################
 [tool.ruff]
 line-length = 88
 
 [tool.ruff.lint]
-select = ["N", "E", "W", "D", "F", "I", "C90", "S"]
+select = ["N", "E", "W", "D", "F", "I", "C90", "S", "ANN", "UP", "B", "PL", "RUF"]
 ignore = ["D203", "D212", "D400", "D415"]
-
 
 [tool.ruff.lint.per-file-ignores]
 "__init__.py" = ["F401", "D104"]
 "**/{tests,docs,tools}/*" = ["E402"]
-
+# apps/フォルダ内のプロジェクトではドキュメント関連のルールを無視
+"apps/**/*.py" = ["D"]
 
 [tool.ruff.lint.isort]
 known-third-party = ["fastapi", "pydantic", "starlette"]
 
 [tool.ruff.lint.mccabe]
-max-complexity = 3
+max-complexity = 10
 
 [tool.ruff.lint.pydocstyle]
 convention = "google"

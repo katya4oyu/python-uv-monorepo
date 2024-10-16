@@ -4,7 +4,6 @@ from greeting import hello
 
 
 def main():
-    """Main entry point of the app."""
     args = sys.argv[1:]
     if not args:
         print("Usage: greeter <name>")
