@@ -10,6 +10,9 @@ dependencies = [
   "greeting"
 ]
 
+[tool.uv.sources]
+greeting = { workspace = true }
+
 [project.scripts]
 app = "greeter:main"
 

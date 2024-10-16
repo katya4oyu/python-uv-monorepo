@@ -19,14 +19,10 @@ dev-dependencies = [
 ]
 
 [tool.uv.sources]
-greeting = { workspace = true }
-greeter = { workspace = true }
+# greeting = { workspace = true }
 
 [tool.uv.workspace]
-members = ["libs/*","apps/*"]
-
-[project.scripts]
-greeter = "greeter:main"
+members = ["libs/*", "apps/*"]
 
 [tool.ruff]
 line-length = 88
