@@ -33,7 +33,7 @@ ignore = ["D203", "D212", "D400", "D415"]
 
 
 [tool.ruff.lint.per-file-ignores]
-"__init__.py" = ["F401"]
+"__init__.py" = ["F401", "D104"]
 "**/{tests,docs,tools}/*" = ["E402"]
 
 
