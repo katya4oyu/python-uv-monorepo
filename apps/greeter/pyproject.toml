@@ -1,0 +1,15 @@
+[project]
+name = "greeter"
+version = "0.1.0"
+description = "Add your description here"
+requires-python = ">=3.10, <4"
+dependencies = [
+  "greeting"
+]
+
+[project.scripts]
+greeter = "greeter:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"

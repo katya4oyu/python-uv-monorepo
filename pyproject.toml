@@ -1,0 +1,49 @@
+[project]
+name = "python-uv-monorepo"
+version = "0.1.0"
+description = "A mono-repo Python + uv"
+readme = "README.md"
+license = "MIT"
+authors = [
+    { name = "Yuya Kato", email = "katya4oyu@icloud.com" }
+]
+requires-python = ">=3.10, < 4"
+
+dependencies = [
+    "greeting"
+]
+
+[tool.uv]
+dev-dependencies = [
+    "mypy>=1.12.0",
+    "ruff>=0.6.9",
+]
+
+[tool.uv.sources]
+greeting = { workspace = true }
+greeter = { workspace = true }
+
+[tool.uv.workspace]
+members = ["libs/*","apps/*"]
+
+[tool.ruff]
+line-length = 88
+
+[tool.ruff.lint]
+select = ["N", "E", "W", "D", "F", "I", "C90", "S"]
+ignore = ["D203", "D212", "D400", "D415"]
+
+
+[tool.ruff.lint.per-file-ignores]
+"__init__.py" = ["F401"]
+"**/{tests,docs,tools}/*" = ["E402"]
+
+
+[tool.ruff.lint.isort]
+known-third-party = ["fastapi", "pydantic", "starlette"]
+
+[tool.ruff.lint.mccabe]
+max-complexity = 3
+
+[tool.ruff.lint.pydocstyle]
+convention = "google"
